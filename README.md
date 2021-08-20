@@ -1,7 +1,7 @@
-# first
+#30 days flutter Project
 
-A new Flutter project.
-
+in this github we will learn about flutter in 30 days
+#currently I have uploaded Day-1 to Day-4 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
