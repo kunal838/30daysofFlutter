@@ -1,5 +1,6 @@
 import 'package:first/pages/HomeScreen.dart';
 import 'package:first/pages/LoginPage.dart';
+import 'package:first/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'pages/HomeScreen.dart';
 
@@ -11,8 +12,8 @@ void main() {
     initialRoute: "/login",
     routes: {
       "/": (context) => LoginPage(),
-      "/login": (context) => LoginPage(),
-      "/home": (context) => HomePage()
+      MyRoutes.loginRoute: (context) => LoginPage(),
+      MyRoutes.homeRoute: (context) => HomePage()
     },
   ));
 }
