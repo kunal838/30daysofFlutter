@@ -1,44 +1,20 @@
+import 'dart:js';
+
+import 'package:first/pages/HomeScreen.dart';
+import 'package:first/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
+import 'pages/HomeScreen.dart';
 
 void main() {
-  runApp(MaterialApp(home: HomePage()));
+  runApp(MaterialApp(
+    themeMode: ThemeMode.light,
+    theme: ThemeData(primarySwatch: Colors.deepPurple),
+    darkTheme: ThemeData(brightness: Brightness.dark),
+    initialRoute: "/login",
+    routes: {
+      "/": (context) => LoginPage(),
+      "/login": (context) => LoginPage(),
+      "/home": (context) => HomePage()
+    },
+  ));
 }
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("catalog App"),
-      ),
-      body: Center(
-        child: Text("learning flutter 30days challenge"),
-      ),
-      drawer: Drawer(),
-    );
-  }
-}
-
-/* 
-MaterialApp(
-      home: Scaffold(
-    appBar: AppBar(
-      title: Text("okk working"),
-      backgroundColor: Colors.red[400],
-    ),
-    body: Center(
-      child: Text(
-        "hello k4's",
-        style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2,
-            color: Colors.grey[600]),
-      ),
-    ),
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {},
-      child: Text("clicks"),
-      backgroundColor: Colors.red[500],
-    ),
-  )) */
