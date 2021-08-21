@@ -6,10 +6,10 @@ import 'pages/HomeScreen.dart';
 
 void main() {
   runApp(MaterialApp(
-    themeMode: ThemeMode.light,
-    theme: ThemeData(primarySwatch: Colors.deepPurple),
+    themeMode: ThemeMode.dark,
+    theme: ThemeData(primarySwatch: Colors.blueGrey),
     darkTheme: ThemeData(brightness: Brightness.dark),
-    initialRoute: "/login",
+    initialRoute: "/",
     routes: {
       "/": (context) => LoginPage(),
       MyRoutes.loginRoute: (context) => LoginPage(),
